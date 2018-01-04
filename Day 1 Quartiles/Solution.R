@@ -1,11 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
 #Language R
-input <- scan("stdin")
-n <- input[1]
-x <- input[2:(n+1)]
-f <- input[(n+2):(2*n+1)]
+l2i <- function(line) as.integer(strsplit(line, split=" ")[[1]])
+text <- readLines("stdin", warn=F)
 
-v <- rep(x, f)
-m <- median(v)
-q_1 <- median(v[which(v<m)])
-q_2 <- median(v[which(v>m)])
-cat(format(q_2 - q_1, nsmall=1))
+vals <- l2i(text[2])
+med <- median(vals)
+
+cat(c(median(vals[vals < med]),
+      med,
+      median(vals[vals > med])), sep="\n")
