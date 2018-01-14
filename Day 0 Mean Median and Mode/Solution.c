@@ -1,3 +1,8 @@
+//Solution to Problem 0.1 of 10 days of statistics
+//Author: Vikram Varun
+//Submitted on 22nd August 2016
+//Language C
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
